@@ -5,14 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - iOSBuilding Blog</title>
+  <title>在OC中两个对象的交互 - iOSBuilding Blog</title>
   <meta name="author" content="iOSBuilding">
 
   
-  <meta name="description" content="Blog Archive 2013 在OC中两个对象的交互
-Mar 21 2013 AFNetworking的总结
-Mar 20 2013 关于ios常用的几个开发工具
-Mar 20 2013 Recent Posts 在OC中两个对象的交互 AFNetworking的总结 &hellip;">
+  <meta name="description" content="当两个对象A对象B，比如两个ViewController他们需要传递数据，你能想到那些方法呢？ NSNotificationCenter 一对多的传递方式。对象A发出一个消息到消息中心，消息中心随后分发消息给监听该消息的对象，对象与对象之间不需要彼此知道，有点太loose啦。 KVO (Key- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -21,7 +18,7 @@ Mar 20 2013 Recent Posts 在OC中两个对象的交互 AFNetworking的总结 &he
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://iOSBuilding.github.com/blog/archives">
+  <link rel="canonical" href="http://iOSBuilding.github.com/blog/2013/03/21/zai-oczhong-liang-ge-dui-xiang-de-jiao-hu">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="iOSBuilding Blog" type="application/atom+xml">
@@ -67,51 +64,101 @@ Mar 20 2013 Recent Posts 在OC中两个对象的交互 AFNetworking的总结 &he
   <div id="main">
     <div id="content">
       <div>
-<article role="article">
+<article class="hentry" role="article">
   
   <header>
-    <h1 class="entry-title">Blog Archive</h1>
+    
+      <h1 class="entry-title">在OC中两个对象的交互</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-21T08:51:00+08:00" pubdate data-updated="true">Mar 21<span>st</span>, 2013</time>
+        
+      </p>
     
   </header>
-  
-  <div id="blog-archives">
 
 
+<div class="entry-content"><p>当两个对象A对象B，比如两个ViewController他们需要传递数据，你能想到那些方法呢？</p>
 
-  
-  <h2>2013</h2>
+<h3>NSNotificationCenter</h3>
 
-<article>
-  
-<h1><a href="/blog/2013/03/21/zai-oczhong-liang-ge-dui-xiang-de-jiao-hu/">在OC中两个对象的交互</a></h1>
-<time datetime="2013-03-21T08:51:00+08:00" pubdate><span class='month'>Mar</span> <span class='day'>21</span> <span class='year'>2013</span></time>
+<p>一对多的传递方式。对象A发出一个消息到消息中心，消息中心随后分发消息给监听该消息的对象，对象与对象之间不需要彼此知道，有点太loose啦。</p>
 
+<h3>KVO (Key-Value Observing)</h3>
 
-</article>
+<p>对象A监听对象B的属性，当对象B被监听的属性改变，通知对象A执行想要执行的方法。</p>
 
+<h3>Direct pointers</h3>
 
+<p>对象A有一个指针指向对象B，从而直接使用该指针操作对象B。</p>
 
-<article>
-  
-<h1><a href="/blog/2013/03/20/afnetworkingde-zong-jie/">AFNetworking的总结</a></h1>
-<time datetime="2013-03-20T16:02:00+08:00" pubdate><span class='month'>Mar</span> <span class='day'>20</span> <span class='year'>2013</span></time>
+<h3>Delegate</h3>
 
+<p>对象A是对象B的代理。在这种情况下对象A不知道任何关于对象B的事，他只知道对象作为他的代理可以传递消息。</p>
 
-</article>
+<h3>Blocks</h3>
 
+<p>Blocks和代理有些类似。对象B给对象A一个或多个blocks只有当特定消息的发生的时候才执行。可以看AFNetworking里面大量使用block。</p>
 
+<p>此文大部分翻译自<a href="https://github.com/hollance">@hollance</a>的<a href="http://www.hollance.com/2012/07/communicate-between-objects-using-channels/">Communicate between objects using channels</a>
+主要是为自己总结，不足之处，敬请谅解。</p>
 
-<article>
-  
-<h1><a href="/blog/2013/03/20/guan-yu-ioschang-yong-de-ji-ge-kai-fa-gong-ju/">关于ios常用的几个开发工具</a></h1>
-<time datetime="2013-03-20T14:00:00+08:00" pubdate><span class='month'>Mar</span> <span class='day'>20</span> <span class='year'>2013</span></time>
-
-
-</article>
-
+<p>另奉上一大神关于NSNotificationCenter的Blog<a href="http://www.mikeash.com/pyblog/friday-qa-2011-07-08-lets-build-nsnotificationcenter.html">Let&#8217;s Build NSNotificationCenter</a>。</p>
 </div>
 
+
+  <footer>
+    <p class="meta">
+      
   
+
+<span class="byline author vcard">Posted by <span class="fn">iOSBuilding</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-21T08:51:00+08:00" pubdate data-updated="true">Mar 21<span>st</span>, 2013</time>
+      
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/03/20/afnetworkingde-zong-jie/" title="Previous Post: AFNetworking的总结">&laquo; AFNetworking的总结</a>
+      
+      
+    </p>
+  </footer>
 </article>
 
 </div>

@@ -9,7 +9,7 @@
   <meta name="author" content="iOSBuilding">
 
   
-  <meta name="description" content="一直想写一篇关于AFNetworking学习总结的文章便于自己记忆，迟迟没有动手，今天终于开始动笔啦。自从ASIH的作者停止更新之后，我们不免有点小失望，直到AFNetworking的出现让我们重新燃起激情。AFnetworking稳定的更新维护及其良好的可扩展性，不得不佩服@ &hellip;">
+  <meta name="description" content="当两个对象A对象B，比如两个ViewController他们需要传递数据，你能想到那些方法呢？ NSNotificationCenter 一对多的传递方式。对象A发出一个消息到消息中心，消息中心随后分发消息给监听该消息的对象，对象与对象之间不需要彼此知道，有点太loose啦。 KVO (Key- &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -65,6 +65,67 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2013/03/21/zai-oczhong-liang-ge-dui-xiang-de-jiao-hu/">在OC中两个对象的交互</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-03-21T08:51:00+08:00" pubdate data-updated="true">Mar 21<span>st</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>当两个对象A对象B，比如两个ViewController他们需要传递数据，你能想到那些方法呢？</p>
+
+<h3>NSNotificationCenter</h3>
+
+<p>一对多的传递方式。对象A发出一个消息到消息中心，消息中心随后分发消息给监听该消息的对象，对象与对象之间不需要彼此知道，有点太loose啦。</p>
+
+<h3>KVO (Key-Value Observing)</h3>
+
+<p>对象A监听对象B的属性，当对象B被监听的属性改变，通知对象A执行想要执行的方法。</p>
+
+<h3>Direct pointers</h3>
+
+<p>对象A有一个指针指向对象B，从而直接使用该指针操作对象B。</p>
+
+<h3>Delegate</h3>
+
+<p>对象A是对象B的代理。在这种情况下对象A不知道任何关于对象B的事，他只知道对象作为他的代理可以传递消息。</p>
+
+<h3>Blocks</h3>
+
+<p>Blocks和代理有些类似。对象B给对象A一个或多个blocks只有当特定消息的发生的时候才执行。可以看AFNetworking里面大量使用block。</p>
+
+<p>此文大部分翻译自<a href="https://github.com/hollance">@hollance</a>的<a href="http://www.hollance.com/2012/07/communicate-between-objects-using-channels/">Communicate between objects using channels</a>
+主要是为自己总结，不足之处，敬请谅解。</p>
+
+<p>另奉上一大神关于NSNotificationCenter的Blog<a href="http://www.mikeash.com/pyblog/friday-qa-2011-07-08-lets-build-nsnotificationcenter.html">Let&#8217;s Build NSNotificationCenter</a>。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -240,6 +301,10 @@ success:^(NSURLRequest *request, NSHTTPURLResponse *response, id propertyList) {
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/03/21/zai-oczhong-liang-ge-dui-xiang-de-jiao-hu/">在OC中两个对象的交互</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2013/03/20/afnetworkingde-zong-jie/">AFNetworking的总结</a>
