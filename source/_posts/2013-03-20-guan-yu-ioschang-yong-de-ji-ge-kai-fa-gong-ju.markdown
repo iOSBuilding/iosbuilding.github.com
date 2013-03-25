@@ -16,4 +16,20 @@ categories:
 
 *安装方法*打开下载的工程运行一下就自动安装啦
 
+##查看Sqite中存入数据工具
+当我们要查看sqilte里的数据的时候怎么办，总不能每次都手动代码查看把，下面介绍几个工具
+
+* SQLite Database Browser [下载地址](http://sourceforge.net/projects/sqlitebrowser/)
+* 还有火狐下的一款插件工具SQLite Manager
+
+##BBUncrustifyPlugin-Xcode(代码美化工具)
+这是一个代码美化工具的Xcode的插件，当我们代码写成如下形式时
+{%img /images/code1.png%}
+
+只要运行下这个插件(点击Edit=>Uncrustify选项)就美化成如下形式
+{%img /images/code2.png%}
+
+[下载地址](https://github.com/benoitsan/BBUncrustifyPlugin-Xcode)
+
+*安装方法*打开下载的工程运行一下就自动安装啦
 ##后续更新中 哈哈##
