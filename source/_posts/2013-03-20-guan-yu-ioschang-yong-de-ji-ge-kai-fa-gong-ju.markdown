@@ -32,4 +32,14 @@ categories:
 [下载地址](https://github.com/benoitsan/BBUncrustifyPlugin-Xcode)
 
 *安装方法*打开下载的工程运行一下就自动安装啦
+
+##Xcode中完美的插件管理工具
+在也不要去愁去寻找Xcode的插件了！！！
+
+[下载地址](https://github.com/mneorr/alcatraz-packages)
+
+##SimPholders
+快速方便查找Xocde的项目在Finder位置，不要在杯具的望着一堆hash一直一个一个寻找自己刚编译完的项目了
+
+[下载地址](http://simpholders.com/)
 ##后续更新中 哈哈##
